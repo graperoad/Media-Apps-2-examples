@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" applicationComplete="init()">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import animals.Animal;
+			import animals.Ocelot;
+			import animals.dogs.*;
+			
+			public function init():void {
+				
+				
+				//OOP concepts
+				var myHusky:Dog = new Husky();
+				var myMal:Malamute = new Malamute();
+				var myOce:Ocelot = new Ocelot();
+				
+				var animalsArray:Array = [myHusky, myMal, myOce];
+				
+				for each( var animal:Animal in animalsArray) {
+					animal.eat();
+				}
+				
+				
+			}
+		]]>
+	</fx:Script>
+</s:Application>

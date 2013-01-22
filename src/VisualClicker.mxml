@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" 
+			   xmlns:clicker2="com.examples222.clicker2.*"
+			   applicationComplete="init()"
+			   >
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+
+	<fx:Script>
+		<![CDATA[
+			
+			import com.examples222.clicker2.*;
+			
+			import spark.components.Image;
+			
+			public function init():void {
+				var gt:GreenTarget = new GreenTarget(2);
+				
+				gt.x = 220;
+				gt.y = 220;
+				this.addElement(gt);
+				
+				var myImage:Image = new Image();
+				myImage.source = "Some/path/to/image.jpg";
+				
+			}
+		]]>
+	</fx:Script>
+	
+	
+	<clicker2:RedTarget x="20" y="20" />
+	
+</s:Application>

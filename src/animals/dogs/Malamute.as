@@ -5,9 +5,9 @@ package animals.dogs
 		
 		public var fluffiness:Number;
 		
-		public function Malamute()
+		public function Malamute(weightIn:Number)
 		{
-			super();
+			super(weightIn);
 			this.name = "Malamute";
 		}
 	}

@@ -4,7 +4,7 @@ package animals
 	{
 		public function Ocelot()
 		{
-			super();
+			super(10);
 			this.name = "Ocelot";
 		}
 	}

@@ -14,13 +14,26 @@
 			public function init():void {
 				
 				
-				//OOP concepts
-				var myHusky:Dog = new Husky();
-				var myMal:Malamute = new Malamute();
+				//instantiate
+				var myHusky:Husky = new Husky("Mr. Giggles");
+				//myHusky.name = "Stephan";
+				//myHusky.weight = 10;
+				myHusky.pullingCapability = 15;
+				
+				//trace( myHusky.dead );
+				
+				myHusky.weight = 0;
+				
+				
+				myHusky.findBone();
+				//trace("weight after bone: " + myHusky.weight);
+				
+				var myMal:Malamute = new Malamute(10);
 				var myOce:Ocelot = new Ocelot();
 				
 				var animalsArray:Array = [myHusky, myMal, myOce];
 				
+				//polymorphism
 				for each( var animal:Animal in animalsArray) {
 					animal.eat();
 				}

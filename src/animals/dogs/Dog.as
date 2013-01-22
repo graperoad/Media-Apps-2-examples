@@ -7,9 +7,18 @@ package animals.dogs
 		
 		public var dogQ:Number;
 		
-		public function Dog()
+		public function Dog(weightIn:Number)
 		{
-			super();
+			super(weightIn);
+		}
+		
+		public function findBone():void {
+			_weight += 2;
+		}
+		
+		override public function eat():void {
+			_weight += 3;
+			trace(name + " is eating like a dog!");
 		}
 	}
 }

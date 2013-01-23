@@ -2,8 +2,8 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
 			   xmlns:s="library://ns.adobe.com/flex/spark" 
 			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" 
+			   applicationComplete="init()" 
 			   xmlns:clicker2="com.examples222.clicker2.*"
-			   applicationComplete="init()"
 			   >
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
@@ -16,21 +16,18 @@
 			
 			import spark.components.Image;
 			
-			public function init():void {
-				var gt:GreenTarget = new GreenTarget(2);
+			public function	init():void {
+				var myTarget:CustomTarget = new CustomTarget();
+				this.addElement(myTarget);
 				
-				gt.x = 220;
-				gt.y = 220;
+				var gt:GreenTarget = new GreenTarget(1.5);
+				gt.x = 210;
 				this.addElement(gt);
-				
-				var myImage:Image = new Image();
-				myImage.source = "Some/path/to/image.jpg";
-				
 			}
 		]]>
 	</fx:Script>
 	
-	
-	<clicker2:RedTarget x="20" y="20" />
+	<clicker2:RedTarget x="200" y="200" />
+	<clicker2:GreenTarget x="0" y="200" tscale="2" />
 	
 </s:Application>

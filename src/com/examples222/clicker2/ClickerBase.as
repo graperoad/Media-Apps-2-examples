@@ -9,15 +9,16 @@ package com.examples222.clicker2
 	{
 		public function ClickerBase()
 		{
+			trace("hello world!");
 			this.addEventListener(MouseEvent.MOUSE_OVER, onMouseOver);
 			this.addEventListener(MouseEvent.MOUSE_OUT, onMouseOut);
 		}
 		
-		public function onMouseOver(e:MouseEvent):void {
-			this.alpha = .5;
+		public function onMouseOver(e:MouseEvent=null):void {
+			this.alpha = .75;
 		}
 		
-		public function onMouseOut(e:MouseEvent):void {
+		public function onMouseOut(e:MouseEvent=null):void {
 			this.alpha = 1;
 		}
 	}

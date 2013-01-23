@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<actionScriptProperties analytics="false" mainApplicationPath="Main.mxml" projectUUID="e28e28b9-7b48-4c2d-81bd-fe8259470ff5" version="10">
+<actionScriptProperties analytics="false" mainApplicationPath="VisualClicker.mxml" projectUUID="e28e28b9-7b48-4c2d-81bd-fe8259470ff5" version="10">
   <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath/>
     <libraryPath defaultLinkType="0">
@@ -14,6 +14,7 @@
     <sourceAttachmentPath/>
   </compiler>
   <applications>
+    <application path="VisualClicker.mxml"/>
     <application path="Main.mxml"/>
   </applications>
   <modules/>

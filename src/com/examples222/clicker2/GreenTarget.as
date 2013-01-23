@@ -7,28 +7,27 @@ package com.examples222.clicker2
 	{
 		
 		private var _targScale:Number;
+		public var tscale:Number;
 		
 		public function GreenTarget(targScaleIn:Number = 0.5)
 		{
 			super();
 			
-			_targScale = targScaleIn;
+			tscale = targScaleIn;
 			
 			
 			this.graphics.beginFill(0x009900);
 			this.graphics.drawRect(0,0,200,200);
 			
-			this.addEventListener(MouseEvent.MOUSE_OVER, onMouseOver);
-			this.addEventListener(MouseEvent.MOUSE_OUT, onMouseOut);
 		}
 		
-		override public function onMouseOver(e:MouseEvent):void {
+		override public function onMouseOver(e:MouseEvent=null):void {
 			super.onMouseOver(e);
 			
-			this.scaleX = this.scaleY =  _targScale;
+			this.scaleX = this.scaleY =  tscale;
 		}
 		
-		override public function onMouseOut(e:MouseEvent):void {
+		override public function onMouseOut(e:MouseEvent=null):void {
 			super.onMouseOut(e);
 			this.scaleX = this.scaleY = 1;
 		}

@@ -1,0 +1,27 @@
+<clouds>
+
+	<!--  
+		three rules of XML 
+		1. Only ONE ROOT TAG
+		2. Close items in the order you opened them
+		3. Add quotes around attributes
+		
+		Values of XML
+		1. Human readable
+		2. Easy to write and understand (to point)
+		3. Accepted data exchange/storage format
+	-->
+
+
+	<!--  'attributes'  -->
+	<cloud name="mr. cloud" type="cumulus" />
+
+	<!--  'nodes', whith children  -->
+	<cloud>
+		<name>
+		</name>
+	</cloud>
+	<!--  'trailing slash', 'self-closing tag'  -->
+	<cloud />
+
+</clouds>

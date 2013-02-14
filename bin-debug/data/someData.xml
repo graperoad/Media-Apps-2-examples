@@ -1,0 +1,14 @@
+<beads>
+	<bead>
+		<color>red</color>
+		<shininess>5</shininess>
+	</bead>
+	<bead>
+		<color>mauve</color>
+		<shininess>0</shininess>
+	</bead>
+	<bead>
+		<color>green</color>
+		<shininess>105</shininess>
+	</bead>
+</beads>

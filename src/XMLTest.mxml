@@ -11,8 +11,15 @@
 	<fx:Script>
 		<![CDATA[
 			public function init():void {
+				
+				//trace(musicXML.album.(@name == "The Else").track.(name == "I'm Impressed").name );
+				
+				
 				//e4x, XML for ECMAscript
 				var albums:XMLList = musicXML.album;
+				
+				//yet another test...
+				var allTracks:XMLList = musicXML.album.(genre == 'rock').track;
 				
 				//using 'array syntax'
 				trace( musicXML.album[0].track[0].name );
@@ -25,10 +32,11 @@
 				trace(firstAlbum);
 				
 				//looping
-				for each( var album:XML in musicXML.children()) {
+				for each( var album:XML in musicXML.children() ) {
 					trace("Album");
 					trace(album.track[0].name);
 				}
+				
 			}
 		]]>
 	</fx:Script>

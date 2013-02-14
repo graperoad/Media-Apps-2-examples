@@ -14,10 +14,11 @@
     <sourceAttachmentPath/>
   </compiler>
   <applications>
+    <application path="ExternalLibraries.mxml"/>
+    <application path="Binding_Examples.mxml"/>
+    <application path="XMLTest.mxml"/>
     <application path="Main.mxml"/>
     <application path="VisualClicker.mxml"/>
-    <application path="ExternalLibraries.mxml"/>
-    <application path="XMLTest.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

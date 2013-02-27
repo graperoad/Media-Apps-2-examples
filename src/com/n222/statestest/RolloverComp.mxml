@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300"
+		 rollOver="this.currentState='Over'"
+		 rollOut="this.currentState='Out'">
+	
+	<s:states>
+		<s:State name="Out" />
+		<s:State name="Over" />
+	</s:states>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:Label text="Out" text.Over="Mouse is over!" color.Out="#ff0000" color.Over="#009900" x.Over="100" />
+	
+</s:Group>

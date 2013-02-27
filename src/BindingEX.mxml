@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600"
+			   applicationComplete="init()">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<fx:XML id="musicXML" source="data/music.xml" />
+		<s:XMLListCollection  id="albums"  source="{musicXML.album}" />
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			
+			[Bindable]
+			public var myVar:String = "Hello";
+			
+			[Bindable]
+			public var textColor:uint = 0x000000;
+			
+			public function init():void {
+				myVar += " world";
+				
+				myInput.addEventListener(MouseEvent.CLICK, onClick);
+				
+				var t:Timer = new Timer(500);
+				t.addEventListener(TimerEvent.TIMER, onT);
+				t.start();
+			}
+			
+			public function onT(e:TimerEvent):void {
+				textColor = Math.random() * 0xFFFFFF;
+			}
+			
+			public function onClick(e:MouseEvent):void {
+				myVar += "o";
+			}
+			
+			public function onListClick(e:MouseEvent):void {
+				trace(myList.selectedItem);
+				myVar = myList.selectedItem.track[0].name;
+			}
+		]]>
+	</fx:Script>
+	<s:VGroup>
+		<s:List id="myList" dataProvider="{albums}" labelField="@name" click="onListClick(event)"/>
+		
+		<s:DataGrid id="myGrid" dataProvider="{albums}">
+			<s:columns>
+				<s:ArrayCollection>
+					<s:GridColumn dataField="@name" headerText="Name" />
+					<s:GridColumn dataField="@artist" headerText="Band" />
+				</s:ArrayCollection>
+			</s:columns>
+		</s:DataGrid>
+		
+		<s:TextInput id="myInput" text="{'Score' + myVar}" color="{textColor}"/>
+	</s:VGroup>
+	
+</s:Application>

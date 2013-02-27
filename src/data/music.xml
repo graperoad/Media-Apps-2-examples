@@ -1,6 +1,5 @@
 <albums>
 	<album name="The Spine" artist="They Might Be Giants">
-		<pubYear>2005</pubYear>
 		<track>
 			<name>Experimental Film</name>
 			<length>3:12</length>
@@ -16,17 +15,6 @@
 	</album>
 	
 	<album name="The Else" artist="They Might Be Giants">
-		<track>
-			<name>I'm Impressed</name>
-			<length>3:12</length>
-		</track>
-		<track>
-			<name>The Mesopotamians</name>
-			<length>2:00</length>
-		</track>
-	</album>
-
-	<album name="Calling all Dawns" artist="They Might Be Giants">
 		<track>
 			<name>I'm Impressed</name>
 			<length>3:12</length>

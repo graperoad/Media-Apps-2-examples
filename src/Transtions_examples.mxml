@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:statestest="com.n222.statestest.*"
+			   applicationComplete="init()">
+	
+	
+	<fx:Style source="myStyle.css" />
+	
+	<s:states>
+		<s:State name="Home" />
+		<s:State name="About" />
+	</s:states>
+	
+	<s:transitions>
+		<s:Transition fromState="Home" toState="About">
+			<s:Sequence>
+				<s:Parallel target="{homeP}">
+					<s:Fade alphaTo="0" duration="700" />
+					<!-- <s:Move xTo="100" xFrom="0" duration="500" />
+					<s:Scale scaleXBy="1.4"  duration="400" /> -->
+				</s:Parallel>
+				<s:AddAction target="{aboutP}" />
+				<s:Fade alphaTo="1" alphaFrom="0" duration="700" target="{aboutP}"/>
+			</s:Sequence>
+		</s:Transition>
+	</s:transitions>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			
+			import com.n222.statestest.ApplicationSingleton;
+			
+			public function init():void {
+				//aboutP.alpha = 0;
+				ApplicationSingleton.appRef = this;
+				
+			}
+		]]>
+	</fx:Script>
+
+		<s:HGroup includeIn="[Home,About]">
+			<s:Button label="Home" click="this.currentState='Home'" />
+			<s:Button label="About" click="this.currentState='About'" />
+		</s:HGroup>
+		<statestest:RolloverComp id="homeP" includeIn="Home" y="200" />
+		<statestest:AboutPage id="aboutP" includeIn="About" y="200"/>
+	
+</s:Application>

@@ -19,7 +19,9 @@
     <application path="XMLTest.mxml"/>
     <application path="Main.mxml"/>
     <application path="VisualClicker.mxml"/>
-    <application path="Viewstates.mxml"/>
+    <application path="BindingEX.mxml"/>
+    <application path="Transtions_examples.mxml"/>
+    <application path="StylesTest.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

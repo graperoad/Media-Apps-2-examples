@@ -1,0 +1,25 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+@namespace states "com.n222.statestest";
+
+/* generic */
+s|VGroup s|Label { color: #00FF00 }
+
+s|Label { color: #9900FF; } 
+
+/* only one */
+#mySpecialLabel { fontWeight: bold; fontSize: 24; }
+
+/* anything with this visual class */
+.myClass { color: #0000FF }
+
+
+/* styling website */
+
+#headerBar { backgroundColor: #133f4d; borderVisible: false; }
+
+#navBar s|Label { fontWeight: bold; color: #eeca00; }
+
+#content { backgroundColor: #FFFFFF; backgroundAlpha: .5; borderVisible: false; } 

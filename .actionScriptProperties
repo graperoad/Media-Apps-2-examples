@@ -19,6 +19,7 @@
     <application path="XMLTest.mxml"/>
     <application path="Main.mxml"/>
     <application path="VisualClicker.mxml"/>
+    <application path="Viewstates.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

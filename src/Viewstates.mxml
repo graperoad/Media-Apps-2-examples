@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:states="com.examples222.states.*"
+			   applicationComplete="init()">
+	
+	<s:states>
+		<s:State name="Home" />
+		<s:State name="About" />
+		<s:State name="Never" />
+	</s:states>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			public function init():void {
+				//aboutP.scaleX = .1;
+			}
+		]]>
+	</fx:Script>
+	
+	<s:VGroup>
+		<s:HGroup includeIn="Home,About">
+			<s:Button label="Home" click="currentState='Home'" />
+			<s:Button label="About" click="currentState='About'" />
+			<s:Button label="Never!" click="currentState='Never'" />
+		</s:HGroup>
+		<states:RollOverStatesComp includeIn="Home"/>
+		<states:AboutPage id="aboutP" includeIn="About" itemDestructionPolicy="auto"/>
+	</s:VGroup>
+	
+</s:Application>

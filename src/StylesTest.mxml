@@ -11,24 +11,25 @@
 	
 	<s:Image source="assets/bg.jpg" width="{this.width}" height="{this.height}" />
 	
-	<s:VGroup>
+
 		<s:BorderContainer id="headerBar" width="{this.width}">
-			<s:Image id="banner" />
-			<s:HGroup id="navBar" x="617" y="81">
-				<s:Label text="Home" />
-				<s:Label text="About" />
-				<s:Label text="Pics" />
-			</s:HGroup>
+			<s:Group width="800" horizontalCenter="0">
+				<s:Image id="banner" />
+				<s:HGroup id="navBar" x="617" y="81">
+					<s:Label text="Home" />
+					<s:Label text="About" />
+					<s:Label text="Pics" />
+				</s:HGroup>
+			</s:Group>
 		</s:BorderContainer>
 
-		<s:Group width="400" horizontalCenter="0">
-			<s:BorderContainer id="content" width="400">
-<s:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consequat felis nec libero volutpat mattis. In et dui cursus eros dapibus accumsan. Nullam fermentum, quam in fermentum vestibulum, massa nisi congue nunc, vitae imperdiet leo arcu sed odio. Nam vitae purus libero, a lacinia lacus. Nulla sapien nulla, porttitor a consequat ac, rhoncus in neque. Donec rutrum neque odio. Etiam eu cursus massa. Pellentesque id dolor massa. Fusce elit nisl, semper ut rhoncus vel, sollicitudin ac tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer et dolor est. Donec quis nibh ac metus varius suscipit vitae vitae nibh. Curabitur convallis neque a dolor egestas ultricies. Vivamus eget purus massa. Vestibulum vehicula accumsan ipsum, pulvinar pharetra urna tempus quis.
-		 
-		 Donec pretium diam dapibus purus rutrum id adipiscing sapien adipiscing. Integer imperdiet, nulla quis pellentesque ultricies, arcu diam pretium eros, vel convallis tellus massa rutrum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut eu nibh tellus, ut condimentum elit. Aenean ornare diam id lacus dapibus eleifend. Nulla non lacus sem, vel scelerisque diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Donec ut leo neque. In non nibh arcu, ullamcorper rutrum quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et odio at lectus molestie fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+		<s:Group y="120" horizontalCenter="0">
+			<s:BorderContainer id="content" width="557" horizontalCenter="0">
+				<s:Label left="0" right="0"
+						 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consequat felis nec libero volutpat mattis. In et dui cursus eros dapibus accumsan. Nullam fermentum, quam in fermentum vestibulum, massa nisi congue nunc, vitae imperdiet leo arcu sed odio. Nam vitae purus libero, a lacinia lacus. Nulla sapien nulla, porttitor a consequat ac, rhoncus in neque. Donec rutrum neque odio. Etiam eu cursus massa. Pellentesque id dolor massa. Fusce elit nisl, semper ut rhoncus vel, sollicitudin ac tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer et dolor est. Donec quis nibh ac metus varius suscipit vitae vitae nibh. Curabitur convallis neque a dolor egestas ultricies. Vivamus eget purus massa. Vestibulum vehicula accumsan ipsum, pulvinar pharetra urna tempus quis.        Donec pretium diam dapibus purus rutrum id adipiscing sapien adipiscing. Integer imperdiet, nulla quis pellentesque ultricies, arcu diam pretium eros, vel convallis tellus massa rutrum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut eu nibh tellus, ut condimentum elit. Aenean ornare diam id lacus dapibus eleifend. Nulla non lacus sem, vel scelerisque diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Donec ut leo neque. In non nibh arcu, ullamcorper rutrum quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et odio at lectus molestie fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
 			</s:BorderContainer>
 		</s:Group>
-	</s:VGroup>
+		
 
 	
 	<!-- 

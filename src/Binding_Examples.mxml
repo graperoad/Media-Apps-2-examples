@@ -5,7 +5,7 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 		<fx:XML  id="musicXML" source="data/music.xml" />
-		<s:XMLListCollection id="albumList" source="{musicXML.album}" /> 
+		<s:XMLListCollection id="albumList" source="{musicXML.album}" />
 	</fx:Declarations>
 	<fx:Script>
 		<![CDATA[

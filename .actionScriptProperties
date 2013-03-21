@@ -15,13 +15,14 @@
   </compiler>
   <applications>
     <application path="ExternalLibraries.mxml"/>
+    <application path="StylesTest.mxml"/>
     <application path="Binding_Examples.mxml"/>
     <application path="XMLTest.mxml"/>
-    <application path="Main.mxml"/>
-    <application path="VisualClicker.mxml"/>
     <application path="BindingEX.mxml"/>
+    <application path="Main.mxml"/>
     <application path="Transtions_examples.mxml"/>
-    <application path="StylesTest.mxml"/>
+    <application path="VisualClicker.mxml"/>
+    <application path="HTTPService.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:HTTPService id="myServ" url="http://localhost/flash/test.php" result="onResult(event)" resultFormat="e4x" />
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.rpc.events.ResultEvent;
+			public function onClick():void {
+				var params:Object = { name: "Testing" };
+				myServ.send(params);
+			}
+			
+			public function onResult(e:ResultEvent):void {
+				trace(e.result.name);
+			}
+		]]>
+	</fx:Script>
+	<s:VGroup>
+		<s:Label id="output" />
+		<s:Button label="Load!" click="onClick()" />
+	</s:VGroup>
+</s:Application>

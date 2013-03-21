@@ -39,7 +39,7 @@
 		<s:DataGrid id="myGrid" dataProvider="{albumList}" click="onGridClick(event)">
 			<s:columns>
 				<s:ArrayList>
-					<s:GridColumn dataField="@name" headerText="Album name" />
+					<s:GridColumn dataField="@name" headerText="Album name"/>
 					<s:GridColumn dataField="@artist" headerText="Artist" />
 				</s:ArrayList>
 			</s:columns>

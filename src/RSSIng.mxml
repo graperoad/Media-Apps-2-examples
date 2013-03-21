@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:HTTPService id="myService" resultFormat="text" />
+		<s:XMLListCollection id="rssList" />
+		<s:ArrayCollection id="weatherList" />
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.http.mxml.HTTPService;
+
+			public function loadRSS():void {
+				myService.url = "http://news.google.com/news?pz=1&cf=all&ned=us&hl=en&output=rss";
+				myService.addEventListener(ResultEvent.RESULT, onRSSResponse);
+				myService.removeEventListener(ResultEvent.RESULT, onWeatherResponse);
+				myService.send();
+			}
+			
+			public function onRSSResponse(e:ResultEvent):void {
+				var xmlResult:XML = XML(myService.lastResult.toString());
+				trace( myService.lastResult.toString());
+				rssList = new XMLListCollection( xmlResult.channel.item.title );
+			}
+			
+			public function onWeatherResponse(e:ResultEvent):void {
+				var resultData:Object = JSON.parse(myService.lastResult.toString());
+				weatherList = new ArrayCollection(resultData.data.temperature);
+			}
+			
+			public function loadWeather():void {
+				myService.url = "http://forecast.weather.gov/MapClick.php?lat=39.96930&lon=-86.16500239999999&unit=0&lg=english&FcstType=json";
+				myService.removeEventListener(ResultEvent.RESULT, onRSSResponse);
+				myService.addEventListener(ResultEvent.RESULT, onWeatherResponse);
+				myService.send();
+			}
+		]]>
+	</fx:Script>
+	<s:HGroup>
+		<s:VGroup>
+			<s:Button label="Load RSS" click="loadRSS()" />
+			<s:List dataProvider="{rssList}"/>
+		</s:VGroup>
+		<s:VGroup>
+			<s:Button label="Load Weather" click="loadWeather()" />
+			<s:List dataProvider="{weatherList}" />
+		</s:VGroup>
+	</s:HGroup>
+
+
+	
+</s:Application>

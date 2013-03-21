@@ -23,6 +23,7 @@
     <application path="Transtions_examples.mxml"/>
     <application path="VisualClicker.mxml"/>
     <application path="HTTPService.mxml"/>
+    <application path="RSSIng.mxml"/>
   </applications>
   <modules/>
   <buildCSSFiles/>
